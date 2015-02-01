@@ -1,0 +1,243 @@
+/* @group Navigation */
+
+.navigation {
+	top: 40px; left: 40px;
+	width: 230px; height: 100px;
+	overflow: hidden;
+	position: fixed; z-index: 1000;
+	background: white; color: black;
+	text-align: center;
+	@include transition(all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1));
+	// box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 0 1px rgba(0,0,0,0.35);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	border-radius: 2px;
+	a { display: block; color: black; }
+
+	.navigation-header {
+		width: 100%;
+		padding: 30px 0 0;
+		overflow: hidden;
+		// padding: 60px 0 20px;
+		@include transition(all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1));
+
+		h1 {
+			font-family: $secondary-font-family;
+			color: rgba(0, 0, 0, 0.9);
+			font-weight: 900;
+			font-size: em(20px, $base-font-size);
+		}
+
+		h2 {
+			margin-top: 5px;
+			text-transform: uppercase;
+			color: rgba(0, 0, 0, 0.8);
+			letter-spacing: 0.1em;
+			font-size: em(16px, $base-font-size);
+		}
+
+		h1, h2 { @include transition(opacity 0.2s $ease-out-quad); }
+
+	}
+
+	.navigation-button {
+		margin: 15px 0 0;
+		span {
+			display: block;
+			width: 20px; height: 2px;
+			margin: 2px auto;
+			background: rgba(0, 0, 0, 0.2);
+		}
+	}
+	.love {
+		opacity: 0;
+		width: 60px; height: 10px;
+		background: url('../images/love.svg') no-repeat center;
+		background-size: 90% 90%;
+		margin: 0px auto;
+		position: relative;
+		
+		&:after, &:before {
+			width: 0px;
+			height: 1px;
+			background: rgba(0, 0, 0, 0.1);
+			position: absolute;
+			content: '';
+			top: 0; bottom: 0;
+			margin: auto;
+		}
+		&:after { right: -170px; width: 35; }
+		&:before { left: -170px; width: 35; }
+	}
+
+	
+
+	.projects-list {
+		margin: 20px auto 30px;
+		width: 230px;
+		opacity: 0;
+		.project {
+			overflow: visible;
+			width: 230px;
+			height: 70px;
+			position: relative;
+
+			& > div {
+				width: 230px; height: 70px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -115px; 
+				margin-top: -35px;
+				@include transition(all 0.2s $ease-out-quad, background 0.2s $ease-out-quad);
+			}
+
+			&[data-project="mediadata"] > div { background-position: center 0; }
+			&[data-project="jperriere-2014"] > div { background-position: center -90px; }
+			&[data-project="game-of-thrones"] > div { background-position: center -180px; }
+			&[data-project="mumories"] > div { background-position: center -360px; }
+			&[data-project="dreamcatcher"] > div { background-position: center -270px; }
+			&[data-project="disney"] > div { background-position: center -450px; }
+			&[data-project="jperriere-2013"] > div { background-position: center -540px; }
+
+			.project-title {
+				font-family: $secondary-font-family;
+				font-size: em(18px, $base-font-size);
+				font-weight: 900;
+				text-transform: uppercase;
+				color: rgba(0, 0, 0, 0.9);
+			}
+			.project-subtitle {
+				font-size: em(16px, $base-font-size);
+				margin: 0;
+				letter-spacing: 0;
+				color: rgba(0, 0, 0, 0.8);
+				text-transform: none;
+			}
+			&:visited, &.visited {
+				.project-title, .project-subtitle {
+					opacity: 0.8;
+				}
+			}
+
+			&:hover, &.current { 
+				& > div {
+					width: 250px; height: 90px;
+					margin-left: -125px; 
+					margin-top: -45px;
+					background-image: url(../images/navigation--sprite.png);
+					background-repeat: no-repeat;
+					border-radius: 3px;
+				}
+				// & > div {
+				// 	width: 226px; height: 86px;
+				// 	margin-left: -113px; 
+				// 	margin-top: -43px;
+				// 	border-radius: 2px;
+				// 	background-image: url(../images/navigation--sprite.png);
+				// 	background-repeat: no-repeat;
+				// }
+				.project-title { color: rgba(255, 255, 255, 0.9); }
+				.project-subtitle { color: rgba(255, 255, 255, 0.8); }		
+			}
+			&.current { cursor: default; }
+		}
+	}
+
+	.about { 
+		
+		opacity: 0;
+		position: relative;
+		margin: 0 0 10px;
+		width: 100%;
+		text-align: center;
+		color: rgba(0, 0, 0, 0.8); 
+		font-size: em(18px, $base-font-size);
+		@include transition(all 0.2s $ease-out-quad, background 0s $ease-out-quad);
+
+	}
+	.social-list {
+		opacity: 0;
+		@include transition(all 0.2s $ease-out-quad, background 0s $ease-out-quad);
+		
+		position: relative;
+		li {
+			display: inline-block;
+			position: relative;
+			margin-right: 35px;
+			&:after {
+				content: '';
+				width: 15px; height: 1px;
+				background: rgba(0, 0, 0, 0.3);
+				position: absolute;
+				right: -35px;
+				margin: auto 10px;
+				top: 0; bottom: 0;
+			}
+			&:last-child { 
+				margin-right: 0;
+				&:after { display: none; }
+			}
+			svg { fill: rgba(0, 0, 0, 0.8); }
+		}
+	}
+
+	// &:hover, &.is-expanded {
+	// 	height: 730px; top: 40px;
+	// 	.navigation-header { padding: 20px 0 20px; }
+	// 	.projects-list { 
+	// 		opacity: 1;
+	// 		@include transition(opacity 0.2s ease-out 0.1s);
+	// 	}
+	// }
+
+	&:not(.is-expanded) { 
+		&:hover { height: 120px; top: 30px; }
+		.navigation-header { padding: 20px 0; }
+	}
+	&.is-expanded { 
+		height: 100%; 
+		// width: 310px;
+		// width: 270px;
+		top: 0; 
+		// left: 0;
+		// left: 30px;
+		border-radius: 0;
+		overflow: visible;
+		// overflow-x: visible;
+		// overflow-y: scroll;
+		.navigation-button { opacity: 0; @include transition(opacity 0.1s $ease-out-quad); }
+		.love { 
+			opacity: 1; top: 0;
+			@include transition(opacity 0.2s $ease-out-quad 0.1s);
+			&:after, &:before {
+				width: 85px;
+				@include transition(width 0.2s $ease-out-quad 0.1s);
+
+			}
+			&:after { right: -85px; @include transition(right 0.2s $ease-out-quad 0.1s); }
+			&:before { left: -85px; @include transition(left 0.2s $ease-out-quad 0.1s); }
+		}
+		.projects-list { 
+			opacity: 1;
+			@include transition(opacity 0.2s $ease-out-quad 0.1s);
+			
+		}
+		.about { 
+			opacity: 1; top: 0; 
+			@include transition(opacity 0.2s $ease-out-quad 0.1s);
+		}
+		.social-list { opacity: 1; top: 0; @include transition(opacity 0.2s $ease-out-quad 0.1s); }
+
+		.navigation-header {
+			&:hover { 
+				cursor: pointer; 
+				h1, h2 { opacity: 0.8; }
+			}
+		}
+	}
+
+	
+	
+}
+
+/* @end of Navigation */

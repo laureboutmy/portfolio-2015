@@ -1,0 +1,61 @@
+/******************/
+/* @group General */
+/******************/
+
+* { @include box-sizing(border-box); }
+body {
+	background: white;
+	color: #fff;
+	font-size: em($base-font-size);
+	font-family: $base-font-family; 
+	// line-height: em($base-line-height, $base-font-size);
+	-webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: #fff; @include transition(color 0.3s ease-out); &:hover { cursor: pointer; }}
+
+// a:hover { color: #00674b; }
+i { text-align: left; text-indent: -9999px; overflow: hidden; }
+.clear { clear: both; }
+hr { border: 0; }
+.rel { position: relative; }
+
+.main-homepage {
+	position: relative;
+	z-index: 0;
+}
+.main-project {
+	position: absolute;
+	width: 100%; 
+	top: 0; left: 0; 
+	z-index: -1;
+	&.is-visible { z-index: 100; }
+}
+
+.line {
+	background: rgb(255, 255, 255);
+	opacity: 0.5;
+
+	&.line-horizontal {
+		width: 50px; height: 1px;
+		margin: 20px auto 40px;
+		@include transition(width 0.2s ease-out); 
+	}
+
+	&.line-horizontal-sm {
+		width: 1px; height: 50px;
+		background: rgb(0, 0, 0);
+		margin: 0px auto 0px;
+	}
+}
+
+.wrapper {
+	margin: 0 auto;
+	overflow: hidden;
+
+	&.wrapper-text { width: 690px; }
+	&.wrapper-image { 
+		width: 1110px; 
+		text-align: center;
+	}
+}
+
+/* @end of General */

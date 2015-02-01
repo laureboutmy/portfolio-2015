@@ -1,0 +1,22 @@
+/******************/
+/* @group Grid */
+/******************/
+
+.grid {
+	max-width: 1110px;
+	margin: 0 auto;
+	.col {
+		margin-right: 10px;
+		float: left;
+		&.col2 { width: 130px; }
+		&.col4 { width: 270px; }
+		&.col6 { width: 410px; }
+		&.col8 { width: 550px; }
+		&:last-child { margin-right: 0; }
+	}
+
+}
+
+
+
+/* @end of Grid */

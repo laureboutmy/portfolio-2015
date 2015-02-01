@@ -1,0 +1,94 @@
+.project {
+	overflow: hidden; 
+	position: relative;
+	
+	.project-type {
+		font-family: $secondary-font-family;
+		font-size: em(14px, $base-font-size);
+		font-weight: 900;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	.project-title {
+		font-family: $secondary-font-family;
+		font-weight: 700;
+		font-size: em(60px, $base-font-size);
+	}
+
+	.project-subtitle {
+		margin-top: 20px;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: rgba(255, 255, 255, 0.5);
+		font-size: em(20px, $base-font-size);
+	}
+
+
+	.project-link {
+		display: block;
+		text-align: center;
+		width: 450px; height: 130px;
+		margin: 0 auto;
+		opacity: 1;
+		position: relative;
+		
+		div {
+			position: absolute;
+			margin: auto;
+			left: 0; right: 0;
+			top: 0; bottom: 0;
+			width: 410px; height: 90px;
+			border: 2px solid rgba(0, 0, 0, 0.8);
+			border-radius: 3px;
+			@include transition(all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1));
+		}
+		span {
+			display: block;
+			color: rgba(0, 0, 0, 0.8);
+			text-transform: uppercase;
+			font-family: $secondary-font-family;
+			font-weight: 900;
+			font-size: em(20px, $base-font-size);
+			line-height: em(30px, 20px);
+			overflow: hidden;
+		}
+		&:hover div { width: 450px; height: 130px; }
+
+	}
+
+	.project-preview {
+		width: 1110px; 
+		height: 50%;
+
+		position: absolute;
+		top: 80%; 
+		// top:150%; bottom: 0;
+		left: 0; right: 0;
+		margin: 0 auto;
+		// margin: auto;
+		background: black;
+		border-radius: 2px;
+		overflow: hidden;
+		@include transition(top 0.2s $ease-out-quad);
+		img {
+			opacity: 0.5;
+			@include transition(opacity 0.2s $ease-out-quad);
+		}
+		.project-link {
+			z-index: 50;
+			position: absolute;
+			left: 0; right: 0;
+			top: 0;  bottom: 0;
+			margin: auto;
+			opacity: 0;
+		}
+		&:hover {
+			// top: 100%;
+			top: 50%;
+			.project-link { opacity: 1; }
+			img { opacity: 1; }
+		}
+	}
+	
+}

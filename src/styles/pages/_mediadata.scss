@@ -1,0 +1,77 @@
+/*******************/
+/* @group Mediadata */
+/*******************/
+article[data-project='mediadata'] {
+	.statistics {
+		margin: 30px auto;
+		li { 
+			display: block; 
+			float: left;
+			margin-right: 10px;
+			&:last-child { margin-right: 0; }
+		}
+	}
+	.statistic {
+		width: 270px;
+		padding: 20px 20px 15px;
+		border: 3px solid rgba(0, 0, 0, 0.1);
+		p {
+
+			&:first-child {
+				font-weight: 300;
+				text-align: center;
+				color: rgba(0, 0, 0, 0.9);
+				display: block;
+				margin: 0 auto;
+				font-size: em(18px, $base-font-size);
+				line-height: em(20px, 18px);
+				font-family: $secondary-font-family;
+				min-height: 160px;
+				span { font-weight: 900; }
+				.number {
+					display: block;
+					font-size: em(80px, 18px);
+					font-weight: 900;
+					line-height: em(80px, 80px);
+				}
+			}
+
+			&.source {
+				font-size: em(16px, $base-font-size);
+				line-height: em(20px, 16px);
+				color: rgba(0, 0, 0, 0.5);
+				text-align: right;
+				margin-bottom: 0;
+			}
+		}
+		.line.line-horizontal {
+			width: 100%;
+			background: rgba(0, 0, 0, 0.1);
+			margin: 10px 0;
+
+		}
+	}
+
+	.filters {
+		margin: 40px 0 20px;
+		border-top: 1px solid #d4d4d4;
+		border-bottom: 1px solid #d4d4d4;
+	}
+
+	.gap {
+		margin: 40px 0 20px;
+		p { font-size: em(20px, $base-font-size); margin-bottom: 0;}
+		span { 
+			display: block;
+			height: 20px;
+			margin: 3px 0 30px;
+			background: $color--mediadata;
+			&.mediadata {
+				width: 20px;
+				opacity: 0.5;
+			} 
+			&.ina { width: 100%; }
+		}
+	}
+}
+/* @end of Mediadata */

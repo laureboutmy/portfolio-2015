@@ -1,0 +1,64 @@
+/*******************/
+/* @group Homepage */
+/*******************/
+article.homepage {
+	background: black;
+	position: relative;
+	a[data-project] {
+		display: block;
+		text-align: center; 
+		width: 100%;
+		height: 100%; 
+		z-index: 100;
+		position: relative;
+		@include transition(background 0.2s $ease-out-quad);
+		
+	}
+	.projects-list li {
+		height: 600px;
+		@include transition(height 0.2s $ease-out-quad);
+
+	}
+	.project {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		
+		&[data-project="mumories"] {
+			background-image: url('../images/mumories/mumories--cover-image.jpg');
+		}
+		&[data-project="dreamcatcher"] {
+			background-image: url('../images/dreamcatcher/dreamcatcher--cover-image.jpg');
+		}
+		&[data-project="jperriere-2014"] {
+			background-image: url('../images/jperriere-2014/jperriere-2014--cover-image.jpg');
+		}
+		&[data-project="jperriere-2013"] {
+			background-image: url('../images/jperriere-2013/jperriere-2013--cover-image.jpg');
+		}
+		&[data-project="game-of-thrones"] {
+			background-image: url('../images/game-of-thrones/game-of-thrones--cover-image.jpg');
+		}
+		&[data-project="mediadata"] {
+			background-image: url('../images/mediadata/mediadata--cover-image.jpg');
+			background-position: center -200px;
+		}
+		&[data-project="disney"] {
+			background-image: url('../images/disney/disney--cover-image.jpg');
+			background-position: center -100px;
+		}
+		
+		&.is-extended { background-position: center center; }
+
+		&.is-fixed {
+			position: fixed; 
+			z-index: 200;
+			top: 0; left: 0;
+		}
+	}
+
+	
+
+	
+}
+/* @end of Homepage */
