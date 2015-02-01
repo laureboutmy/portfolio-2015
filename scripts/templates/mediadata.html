@@ -1,0 +1,197 @@
+<article class="project" data-project="mediadata">
+  <section class="project-cover">
+    <div class="u-verticalAlign">
+    	<h4 class="project-type">Product design</h4>
+      <div class="line line-horizontal"></div>
+      <h1 class="project-title">Mediadata</h1>
+      <h2 class="project-subtitle">Making sense of data</h2>
+      
+    </div>
+    <div class="u-bottomAlign scroll">
+    	<div class="line"></div>
+      <p>scroll</p>
+    </div>
+  </section>
+  <section class="project-content">
+  	<div class="wrapper wrapper-text">
+      <p>
+        The assignment for this project was to create a datavizualization with the theme «culture & medias» in mind. It was made in May 2014 and I was Product Designer as well as the lead Front-end Developer.</p>
+      <p>
+        We decided to create a tool using a set of data from the French National Audiovisual Institute. Simply put, the Mediadata app allows you to dissect and compare the media coverage of famous personnalities over 20 years of data and 75 TV/radio channels.
+      </p>
+    </div>
+  	
+    <h2 class="title title-framed">
+      <span>Concept</span>
+      Coming up with an idea thanks to data</h2>
+
+    <div class="wrapper wrapper-text">
+      <p>During a brainstorming session, we stumbled upon the data library of the French National Audiovisual Institute (INA). It is a repository of all French radio and television audiovisual archives: since 1992, each television and radio channel must record what show is airing, indicating who was present, and what the program was about.</p>
+
+      <h3 class="title title-simple">Statistics</h3>
+
+      <p>Add those few numbers to the equation:</p>
+    </div> 
+    
+    <ul class="wrapper wrapper-image statistics">
+      <li class="statistic">
+        <p><span class="number">98.3%</span>of French <span>households</span> have at least one <span>television</span> set</p>
+        <div class="line line-horizontal"></div>
+        <p class="source">Source: CSA 2013</p>
+      </li>
+      <li class="statistic">
+        <p><span class="number">3:50</span>Average <span>daily</span> television <span>viewing time</span> per <span>individual</span> in France</p>
+        <div class="line line-horizontal"></div>
+        <p class="source">Source: CSA 2013</p>
+      </li>
+      <li class="statistic">
+        <p><span class="number">74%</span>of French people think that <span>journalists</span> are <span>cut off from reality</span></p>
+        <div class="line line-horizontal"></div>
+        <p class="source">Source: IPSOS Janvier 2014</p>
+      </li>
+      <li class="statistic">
+        <p><span class="number">77%</span>of French people <span>don’t trust</span> the <span>media</span></p>
+        <div class="line line-horizontal"></div>
+        <p class="source">Source: IPSOS Janvier 2014</p>
+      </li>
+    </ul>
+    <div class="wrapper wrapper-text">
+      <h3 class="title title-simple">Insight</h3>
+      <p>From then on our problematic was pretty obvious.</p>
+      <blockquote>Medias have a big influence on us but we are uncertain of their impartiality.</blockquote>
+      <p>To explain further, our goal was to create a tool that would help people have an oversight of what is being talked about on medias, forcing journalists on more transparency.</p>
+    </div>
+    
+    <h2 class="title title-framed">
+      <span>Functionalities</span>
+      Designing a useable tool</h2>
+    <div class="wrapper wrapper-text">
+      <p>The biggest challenge in every datavisualisation project is the user experience. The goal is to help our user make sense of the data and get meaning from it.</p>
+      <p>After dissecting the data made available for us by the INA, we chose to concentrate on personalities exposure and comparison. A few factors helped making this decision: our time was limited, and an API was not available: our Back-end Developer had to crawl the INA website with a PHP script to  retrieve all the information we needed. It was easier to focus on people than on topics.</p>
+      <p>In the end, there are three main features for the Mediadata app: being able to explore, compare and filter.</p>
+      <h3 class="title title-simple">The explorer</h3>
+      <p>The user does not usually know what to look for when using the app for the first time.  That is why we created both a search page with suggestions as well as a library listing all of the available personnalities.</p>
+    </div>
+    <div class="slider slider-shadow">
+      <div class="slider-wrapper">
+        <ul class="slider-images">
+          <li>
+            <img width="1110" height="694" src="images/mediadata/mediadata--explorer--1.jpg" alt="">
+            <p class="caption">Yo</p>
+          </li>
+          <li class="active">
+            <img width="1110" height="694" src="images/mediadata/mediadata--explorer--2.jpg" alt="">
+            <p class="caption">The library, alphabetically ordered</p>
+          </li>
+          <li>
+            <img width="1110" height="694" src="images/mediadata/mediadata--explorer--3.jpg" alt="">
+            <p class="caption">Yo</p>
+          </li>
+        </ul>
+        
+      </div>
+      <nav class="slider-navigation">
+        <ul>
+          <li><span></span></li>
+          <li class="active"><span></span></li>
+          <li><span></span></li>
+        </ul>
+      </nav>
+    
+    </div> 
+    <div class="wrapper wrapper-text">
+
+      <h3 class="title title-simple">The comparator</h3>
+      <p>Our main concern with this feature was to guide as much as possible our user when comparing two personalities. We decided to fake splitting the screen in two parts: each personalities has one side and one color. For some of the modules that take all of the window’s width, a color code included in the top bar helps you understand the graphs quickly.</p>
+      <h3 class="title title-simple">Filters</h3>
+      <p>Without the filters, the app does not have much use. They are the feature that allows you to dissect the data. For example, if you are looking to compare candidates to the presidency’ exposure, it only makes sense to do it within the campaign’s dates.</p>
+    </div>
+    <div class="filters">
+      <div class="wrapper wrapper-image">
+        <img src="images/mediadata/mediadata--filters.jpg" alt=""> 
+      </div>
+    </div>
+    <div class="grid">
+      <p class="col col4 caption">Filter through TV, radio, or  canal TV</p>
+      <p class="col col4 caption">Filter if the personnality was mentioned or actually present on the program</p>
+      <p class="col col8 caption">Filter through time</p>
+    </div>
+    <div class="clear"></div>
+   
+    <div class="wrapper wrapper-text">
+      <h3 class="title title-simple">Modules</h3>
+      <p class="no-margin">To display the data, we created multiple modules : </p>
+      <ul>
+        <li>A module displaying the data over time</li>
+        <li>A module showing which days of the week and hours where the person is most talked about</li>
+        <li>A module displaying the most popular programs</li>
+        <li>One for the most popular channels</li>
+        <li>A module showing which personalities are they seen/talked of most with</li>
+      </ul>
+      <p>To create those modules, we found our ideas by exploring dribbble and by doing a lot of sketching. The biggest difficulty we encountered was designing without the actual datas: if you are not careful, you can get some weird surprises; We also had to make sur those modules coulb berolled out to comparison.</p>
+    </div>
+    <div class="slider">
+      <div class="slider-wrapper">
+        <ul class="slider-images">
+          <li>
+            <img width="1020" height="489" src="images/mediadata/mediadata--modules--1.png" alt="">
+            <p class="caption">Yo</p>
+          </li>
+          <li class="active">
+            <img width="482" height="489" src="images/mediadata/mediadata--modules--2.png" alt="">
+            <p class="caption">Data over days of the week</p>
+          </li>
+          <li>
+            <img width="1020" height="489" src="images/mediadata/mediadata--modules--3.png" alt="">
+            <p class="caption">Yo</p>
+          </li>
+        </ul>
+        
+      </div>
+      <nav class="slider-navigation">
+        <ul>
+          <li><span></span></li>
+          <li class="active"><span></span></li>
+          <li><span></span></li>
+        </ul>
+      </nav>
+    
+    </div> 
+    
+
+    <h2 class="title title-framed">
+      <span>Future outlook</span>
+      Mediadata 2.0</h2>
+    <div class="wrapper wrapper-text">
+      <p>We believe there really is a purpose to this project. The next step would be to add more personnalities to the app, as well as topics and to create new modules. The only  thing standing in the way is the data source: there is no INA API and crawling the data takes quite a long time (François Hollande, for example, took us 2 days to retrieve)!</p>
+      
+      <div class="gap">
+        <div class="grid">
+          <div class="col col2">
+            <p>Mediadata 1.0</p>
+          </div>
+          <div class="col col8">
+            <span class="mediadata"></span>
+          </div>
+        </div>  
+        <div class="grid">
+          <div class="clear"></div>
+          <div class="col col2">
+            <p>INA</p>
+          </div>
+          <div class="col col8">
+            <span class="ina"></span>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <p class="caption">The gap between the databases</p>
+      </div>
+
+      
+     
+    </div>
+
+    <h2 class="title title-centered">Thank you for scrolling!</h2>
+    <a class="project-link" href=""><div><span class="u-verticalAlign">Visit the website</span></div></a>
+  </section>
+</article>

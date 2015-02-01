@@ -1,0 +1,33 @@
+.loader {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: -1;
+	background-position: center center;
+
+	text-align: center; 
+	
+	&.is-visible { z-index: 100; }
+	&[data-project="mumories"] {
+		background-image: url('../images/mumories/mumories--cover-image.jpg');
+	}
+	&[data-project="dreamcatcher"] {
+		background-image: url('../images/dreamcatcher/dreamcatcher--cover-image.jpg');
+	}
+	&[data-project="jperriere-2014"] {
+		background-image: url('../images/jperriere-2014/jperriere-2014--cover-image.jpg');
+	}
+	&[data-project="jperriere-2013"] {
+		background-image: url('../images/jperriere-2013/jperriere-2013--cover-image.jpg');
+	}
+	&[data-project="game-of-thrones"] {
+		background-image: url('../images/game-of-thrones/game-of-thrones--cover-image.jpg');
+	}
+	&[data-project="mediadata"] {
+		background-image: url('../images/mediadata/mediadata--cover-image.jpg');
+	}
+	&[data-project="disney"] {
+		background-image: url('../images/disney/disney--cover-image.jpg');
+	}
+}
