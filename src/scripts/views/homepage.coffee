@@ -4,7 +4,7 @@ define [
 ], (love, template) ->
 	'use strict'
 	class HomepageView extends Backbone.View
-		el: '.main-homepage'
+		el: '.main'
 		template: _.template(template)
 		initialize: (options) ->
 			
@@ -48,12 +48,13 @@ define [
 				duration: 200, 
 				specialEasing: 'cubic-bezier(0.165, 0.84, 0.44, 1)'
 				complete: () ->
-
 					$('html, body').css
 						'overflow': 'hidden' 
 						'height': '100%'
 					$this.addClass('is-fixed')
+					love.router.setLoader $this.data('project')
 					window.setTimeout () ->
-						love.router.navigate($this.data('project'), {trigger: true})
+						console.log 'to'
+						# love.router.navigate($this.data('project'), {trigger: true})
 					, 300
 					

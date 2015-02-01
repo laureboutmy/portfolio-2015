@@ -50,6 +50,8 @@ hr { border: 0; }
 
 .rel { position: relative; }
 
+.main { position: relative; z-index: 0; }
+
 .main-homepage { position: relative; z-index: 0; }
 
 .main-project { position: absolute; width: 100%; top: 0; left: 0; z-index: -1; }
@@ -143,6 +145,16 @@ hr { border: 0; }
 .navigation.is-expanded .navigation-header:hover h1, .navigation.is-expanded .navigation-header:hover h2 { opacity: 0.8; }
 
 /* @end of Navigation */
+.loader { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1; background-position: center center; text-align: center; }
+.loader.is-visible { z-index: 100; }
+.loader[data-project="mumories"] { background-image: url("../images/mumories/mumories--cover-image.jpg"); }
+.loader[data-project="dreamcatcher"] { background-image: url("../images/dreamcatcher/dreamcatcher--cover-image.jpg"); }
+.loader[data-project="jperriere-2014"] { background-image: url("../images/jperriere-2014/jperriere-2014--cover-image.jpg"); }
+.loader[data-project="jperriere-2013"] { background-image: url("../images/jperriere-2013/jperriere-2013--cover-image.jpg"); }
+.loader[data-project="game-of-thrones"] { background-image: url("../images/game-of-thrones/game-of-thrones--cover-image.jpg"); }
+.loader[data-project="mediadata"] { background-image: url("../images/mediadata/mediadata--cover-image.jpg"); }
+.loader[data-project="disney"] { background-image: url("../images/disney/disney--cover-image.jpg"); }
+
 .slider { width: 100%; overflow: hidden; margin: 40px 0 20px; }
 .slider .slider-wrapper { -webkit-transition: left 0.2s cubic-bezier(0.165, 0.84, 0.44, 1); -moz-transition: left 0.2s cubic-bezier(0.165, 0.84, 0.44, 1); transition: left 0.2s cubic-bezier(0.165, 0.84, 0.44, 1); }
 .slider .slider-images li { float: left; max-width: 1110px; margin: 0 20px; }
@@ -163,7 +175,7 @@ hr { border: 0; }
 /* @group Homepage */
 /*******************/
 article.homepage { background: black; position: relative; }
-article.homepage a[data-project] { display: block; text-align: center; width: 100%; height: 100%; z-index: 100; position: relative; -webkit-transition: background 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); -moz-transition: background 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); transition: background 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+article.homepage a[data-project] { display: block; text-align: center; width: 100%; height: 100%; position: relative; -webkit-transition: background 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); -moz-transition: background 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); transition: background 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 article.homepage .projects-list li { height: 600px; -webkit-transition: height 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); -moz-transition: height 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); transition: height 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 article.homepage .project { background-position: center center; background-repeat: no-repeat; background-size: cover; }
 article.homepage .project[data-project="mumories"] { background-image: url("../images/mumories/mumories--cover-image.jpg"); }

@@ -9,7 +9,7 @@ article.homepage {
 		text-align: center; 
 		width: 100%;
 		height: 100%; 
-		z-index: 100;
+		//z-index: 100;
 		position: relative;
 		@include transition(background 0.2s $ease-out-quad);
 		

@@ -3,7 +3,7 @@ define [
 ], (SliderView) ->
 	'use strict'
 	class ProjectView extends Backbone.View
-		el: '.main-project'
+		el: '.main'
 		initialize: () -> 
 			@render()
 			

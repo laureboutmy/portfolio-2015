@@ -7,7 +7,6 @@ define [
 	class GameOfThronesView extends ProjectView
 		template: _.template(template)
 		render: () ->
-
 			@$el.html(@template())
 			@initializeSlider()
 			@$el.find('article').addClass('is-visible')

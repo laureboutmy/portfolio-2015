@@ -8,7 +8,7 @@ define [
 			'': 'homepage'
 			'about': 'about'
 			':project': 'project'
-			
+		$loader: $('.loader')
 		navigation: null
 		projects: ['mediadata', 'jperriere-2014', 'dreamcatcher', 'jperriere-2013', 'mumories', 'game-of-thrones', 'disney']
 		initialize: () ->
@@ -49,3 +49,8 @@ define [
 				'overflow': 'visible' 
 				'height': 'auto'
 		
+		setLoader: (project) ->
+			console.log(project, 'yo')
+			@$loader.data('project', project)
+			@$loader.html $('.homepage').find('[data-project=' + project + ']').html()
+			@$loader.addClass('is-visible');
